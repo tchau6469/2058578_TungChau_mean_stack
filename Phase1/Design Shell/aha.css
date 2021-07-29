@@ -1,0 +1,38 @@
+h1 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    color: cyan;
+    text-align: center;
+    border: 3px indianred solid;
+    font-size: 2em;
+}
+
+main {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    color : magenta;
+    text-align: center;
+    border: 3px indigo solid;
+    font-size: 2em;
+
+}
+
+footer {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    color : burlywood;
+    text-align: center;
+    border: 3px forestgreen solid;
+    font-size: 2em;
+    
+
+}
+
+
+
