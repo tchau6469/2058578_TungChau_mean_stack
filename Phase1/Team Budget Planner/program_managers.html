@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Managers</title>
+    <link rel="stylesheet" href = "styles.css">
+    <script src = "myscript.js"></script>
+</head>
+<body>
+    <div style = "padding-top: 100px;">
+        <h1 class = "middle">Program Managers</h1>
+    </div>
+    
+    <div class = "program_manager">
+        <h2 class = "middle">Add New Budget</h2>
+        
+        <form>
+            <label>Client Name</label> <input type = "text" id = "clientName" required> <br>
+            <label>Project Name</label> <input type = "text" id = "projectName" required><br>
+            <label>Budget</label> <input type = "text" id = "budget" required><br>
+
+            
+            <div style = "text-align: center; padding-top: 30px;">
+                <button class = "manager_buttons" onclick = "addClient()">Add</button>
+                <button class = "manager_buttons" type = "reset">Reset</button>
+            </div>
+        </form>
+
+        <a href = "index.html"><button>Back</button> </a>
+    </div>
+
+    <div style = "text-align :center;">
+        *NOTE* Input the fields, click add to add a row, then click back and go to finance teams to see the table
+    </div>
+
+    
+</body>
+</html>

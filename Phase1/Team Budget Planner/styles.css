@@ -1,0 +1,48 @@
+.middle{
+    text-align: center;
+}
+
+.main_page_buttons{
+    text-align: center;
+    margin: auto;
+    font-size: 2em;
+    width: 400px; 
+    
+    border: 15px solid gold; 
+    padding-top: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 100px;
+    
+    column-gap: 20px; 
+    
+}
+
+.program_manager{
+    
+    margin: auto;
+    font-size: large;
+    border: 15px solid gold; 
+    
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 400px;
+    column-gap: 20px; 
+
+}
+
+
+label{
+    
+    display: inline-block;
+    padding: 3px 6px;
+    text-align: right;
+    width: 150px;
+    vertical-align: top;
+}
+
+.manager_buttons{
+   text-align: center;
+    
+}
