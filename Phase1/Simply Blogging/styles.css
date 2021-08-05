@@ -1,0 +1,60 @@
+.carousel .carousel-item {
+    height: 500px;
+}
+img{
+    height: 100%;
+}
+
+label{
+    font-size: x-large;
+}
+
+.niceBorder{
+    border-style:inset;
+    border-width: 10px;
+    border-top-color: lightskyblue;
+    border-left-color: lightskyblue;
+    border-right-color:lightsteelblue;
+    border-bottom-color:lightsteelblue;
+}
+.niceBorderSmall{
+    border-style:groove;
+    border-width: 7px;
+    border-top-color: lightskyblue;
+    border-left-color: lightskyblue;
+    border-right-color:lightsteelblue;
+    border-bottom-color:lightsteelblue;
+}
+
+.niceBorder2{
+    border-style:inset;
+    border-width: 10px;
+    border-right-color: lightskyblue;
+    border-bottom-color: lightskyblue;
+    border-top-color:lightsteelblue;
+    border-left-color:lightsteelblue;
+}
+
+input {
+    background-color: blanchedalmond;
+}
+
+.carousel-caption {
+    color: black;
+    top: 0;
+    bottom: auto;
+}
+
+.carousel-content {
+    font-size: large;
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    z-index: 20;
+    color: black;
+    text-shadow: seagreen;
+  }
+
+  .nav-link{
+      font-size: larger;
+  }

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simply Blogging</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel= "stylesheet" href = "styles.css">
+    <script src = "myScript.js"></script>
+</head>
+<body>
+    
+    <div class = "container rounded niceBorder" style = "background-image:url('background.jpg'); background-size:100% ; ">
+        
+        <!--TITLE-->
+        <div class ="row">
+            <h1 class = "col" style = "text-align: center; font-family: fantasy" >Simply Blogging</h1>
+        </div>
+
+        <!--DUMMY LINKS ON TOP-->
+        <hr style = "height: 5px; border: none; color: grey; background-color: grey;">
+        <div class ="row" >
+            <div class = "col offset-7">
+                <ul class = " nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.youtube.com/watch?v=UmqupMGGAcM" target = "blank">About Us </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.youtube.com/watch?v=UmqupMGGAcM" target = "blank">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.youtube.com/watch?v=UmqupMGGAcM" target = "blank">Call Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.youtube.com/watch?v=UmqupMGGAcM" target = "blank">Donate</a>
+                    </li>
+                </ul>
+            </div>   
+        </div>
+
+        <!--INPUT LABELS AND BOXES-->
+        <div class ="row" >
+            <div class = "col-2" >
+                <label >Title</label>
+            </div>
+            <div class = "col">
+                <input class = "niceBorderSmall" type = "text" size = "51" id = "titleText" required>
+            </div>
+        </div>
+        <div class ="row">
+                <div class = "col-2">
+                    <label>Articles</label> <br>
+                </div>
+                <div class = "col" > 
+                    <textarea class = "niceBorderSmall" id = "articleText" required rows = "2" cols = "54" style= "background-color: blanchedalmond;"></textarea>
+                </div>
+            </div>
+            <div class ="row">
+                <div class = "col-2">
+                    <label>Add Image</label> <br>
+                </div>
+                <div class = "col" >
+                    <input class = "niceBorderSmall" type = "text" size = "51" id = "imgText" required>
+                </div>
+        </div>
+
+
+        <!--ADD BLOG BUTTON AND GALLERY TEXT-->
+        <div class = "row" >
+            <div class ="col offset-2">
+                <button class = "btn btn-primary btn-lg" onclick = "addBlog()" style = "background-color: thistle; font-family: Georgia, 'Times New Roman', Times, serif;">Add Blog</button>
+            </div>
+        </div>
+
+        <div class = "row">
+            <div class = "col text-center">
+                <label style = "font-family: brush script mt; margin-top: -100px; font-size: 3rem;">Gallery</label>
+            </div>
+        </div>
+
+        <!-- CAROUSEL STUFF -->
+        <div id="myCarousel" class="carousel slide niceBorder2 "  data-ride="carousel" style= "margin-bottom: 10px; width: 80%; margin:auto;">
+            <ol class="carousel-indicators" id = "indicators">
+              <li data-target="#myCarousel"  data-slide-to ="0" class="active"></li>
+
+              <!-- EXAMPLE CAROUSEL DATA SLIDE TO SHIT
+              <li data-target="#myCarousel" data-slide-to ="1"></li>
+              <li data-target="#myCarousel" data-slide-to ="2"></li>
+              -->
+            </ol>
+            <div class="carousel-inner" id = "carousel-inner" >
+              <div class="carousel-item active">
+                <img class="h-100 w-100" src="flag.jpg" alt="First slide">
+                <div class="carousel-content">
+                    <p>Default Article</p>
+                </div>
+                <div class="carousel-caption">
+                    <h3>Default Title</h3>
+                </div>
+              </div>
+              
+
+              <!--EXAMPLE CAROUSEL ITEM
+              <div class="carousel-item">
+                <img class="d-block w-100" src="flag.jpg" alt="Second slide">
+              </div>
+                -->
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" style= "width: 30px; height: 30px; color: whitesmoke" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" style= "width: 30px; height: 30px; color: whitesmoke;" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+
+        
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
