@@ -1,0 +1,14 @@
+.niceBorder{
+    border-style:inset;
+    border-width: 10px;
+    border-top-color: lightskyblue;
+    border-left-color: lightskyblue;
+    border-right-color:lightsteelblue;
+    border-bottom-color:lightsteelblue;
+}
+
+img {
+    border-radius: 50%;
+    width: 100%;
+    height: 200px;
+}

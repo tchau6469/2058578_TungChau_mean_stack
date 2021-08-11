@@ -1,6 +1,3 @@
-(() => {
-    localStorage.clear();
-})
 
 let addClient = () => {
     if (document.getElementById("clientName").value =="" || document.getElementById("projectName").value == "" || 

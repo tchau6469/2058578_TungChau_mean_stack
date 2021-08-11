@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Management</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel = "stylesheet" href = "styles.css">
+    <script src = "myScript.js"></script>
+
+</head>
+
+<body>
+    <div class = "container niceBorder" style = "width: 800px;" >
+        <div class = "row">
+            <div class = "col" style = "text-align: center;">
+                <label style= "font-size: x-large; font-style:oblique;">Shopping Cart</label>
+            </div>
+        </div>
+        <div class = "row">
+            <div class = "col-2 offset-1">
+                <label>Cart Size:</label>
+            </div>
+            <div class = "col" >
+                <label id = "cartValue">$0.00</label>
+            </div>
+            <div class = "col offset-7">
+                <a href = "checkout.html"><button class = "btn btn-primary" id = "checkOutButton" disabled>Checkout</button></a>
+            </div>    
+        </div>
+
+        <!--TOP ROW OF ITEMS-->
+        <div class = "row"  style = "margin-top: 30px">
+
+            <!--Top left item-->
+            <div class = "col-4 offset-1 niceBorder">
+                
+                <div id = "underwear">
+                    
+                    <label>Name: Underwear</label> <br>
+                    <label>Price: $20.00</label>
+                </div>
+                <div>
+                    <img src = "./images/underwear.jpg">
+                    <button value = "underwear" onclick = "addItem(this.value)" class = "btn btn-secondary">Add to cart</button>
+                </div> 
+                
+            </div>
+
+            <!--Top right item-->
+            <div class = "col-4 offset-2 niceBorder">
+                
+                <div id = "chair">
+                    
+                    <label>Name: Office Chair</label> <br>
+                    <label>Price: $1400.00 </label>
+                </div>
+                <div>
+                    <img src = "./images/chair.jpg">
+                    <button value = "chair" onclick = "addItem(this.value)" class = "btn btn-secondary">Add to cart</button>
+                </div>
+                
+            </div>
+
+        </div>
+
+        <!--BOTOTM ROW OF ITEMS-->
+        <div class = "row"  style = "margin-top: 20px; margin-bottom: 20px">
+            <!--Bottom left item-->
+            <div class = "col-4 offset-1 niceBorder">
+                
+                <div id = "dog">
+                    
+                    <label>Name: Dog </label><br>
+                    <label>Price: $2000.00</label>
+                </div>
+                <div>
+                    <img src = "./images/samoyed.jpg">
+                    <button value = "dog" onclick = "addItem(this.value)" class = "btn btn-secondary">Add to cart</button>
+                </div>
+                
+            </div>
+
+            <!--Bottom right item-->
+            <div class = "col-4 offset-2 niceBorder">
+                
+                <div id = "shoes">
+                    <label>Name: Shoes</label> <br>
+                    <label>Price: $85.00</label>
+                </div>
+                <div>
+                    <img src = "./images/stan-smith.jpg">
+                    <button value = "shoes" onclick = "addItem(this.value)" class = "btn btn-secondary">Add to cart</button>
+                </div>
+                
+            </div>
+
+        </div>
+
+
+    </div>
+    <h4 style = "text-align: center;">***checkout button is disabled until at least one item is added to cart!!!***</h4>
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
