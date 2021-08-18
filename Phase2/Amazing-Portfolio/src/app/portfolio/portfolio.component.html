@@ -1,0 +1,77 @@
+
+<!--LOGIN PAGE-->
+<div *ngIf = "loginFlag">
+    <h2>Welcome to the login page!</h2>
+    <div style = "border: solid 1px; margin: auto; width:400px;">
+        <form style = "text-align: center;" [formGroup] = "loginRef" (ngSubmit) = "login()">
+            Username: <input type = "text"  formControlName= "user" required>
+            <br>
+            Password:  <input type = "password" formControlName = "pass" required>
+            <br>
+            
+            <input type = "submit" value = "Login" [disabled] = "!loginRef.valid"> 
+            
+        </form>
+
+        <input type = "button" value = "Register Now!" (click) = "goToRegis()" >
+    </div>
+</div>
+<div style = "margin: auto; width:400px; color: red" *ngIf = "incorrectFlag">Wrong login info, try again</div>
+
+
+<!--REGISTRATION PAGE-->
+<div *ngIf = "registrationFlag">
+    <h2>Welcome to the registration page!</h2>
+    <div style = "border: solid 1px; margin: auto; width:400px;">
+        <form style = "text-align: center;" [formGroup] = "regisRef" (ngSubmit) = "registerUser()">
+            Username: <input type = "text"  formControlName= "user" required >
+            <br>
+            Password:  <input type = "password" formControlName = "pass" required >
+            <br>
+            
+            <input type = "submit" value = "register" [disabled] = "!regisRef.valid">
+        </form>
+
+        <input type = "button" value = "Login Now!" (click) = "goToLogin()" >
+    </div>
+</div>
+
+
+<!--PORTFOLIO PAGE-->
+<div *ngIf = "portfolioFlag">
+    <h2>Welcome to my portfolio!!!</h2>
+    <div>
+        <h2>Welcome {{username}}!!</h2>
+    </div>
+    <div style = "border: solid 1px; margin: auto; width:400px;">
+        <form [formGroup] = "contactRef" (ngSubmit) = "addContact()">
+            Contact Name <input type = "text" formControlName = "name" required> <br>
+            Phone No. <input type = "text" formControlName = "number" style = "margin-left: 24px;" required >
+            <br>
+            <input type = "submit" value = "Save Contact" style = "margin-left: 96px;" 
+            [disabled] = "!contactRef.valid">
+            <br>
+        </form>
+
+        <!--TABLE STUFF-->
+        <div style = "margin-top:30px; text-align: center;">
+            <label >Contact Details</label> <br>
+            <table border = "1" style = "margin: 0 auto">
+                <tr>
+                    <th>Name</th>
+                    <th>Phone No.</th>
+                </tr>
+                <tr *ngFor = "let contact of contacts">
+                    <td>{{contact.name}}</td>
+                    <td>{{contact.number}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+        
+
+</div>
+
+
+
