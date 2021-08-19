@@ -1,0 +1,48 @@
+mat-card-title {
+    text-align: center;
+}
+
+mat-card-subtitle{
+    text-align: center;
+}
+label{
+    font-size: x-large;
+    display: inline-block;
+    padding: 3px 6px;
+    text-align: right;
+    width: 150px;
+    vertical-align: top;
+}
+
+mat-card {
+    width:60%;
+    margin:auto;
+    border: 2px solid;
+}
+
+mat-grid-tile{
+    border: 2px solid;
+}
+
+input {
+    font-size: large;
+    margin-left: 10px;
+}
+
+.niceBorder {
+    border-style:inset;
+    border-width: 10px;
+    border-top-color: lightskyblue;
+    border-left-color: lightskyblue;
+    border-right-color:lightsteelblue;
+    border-bottom-color:lightsteelblue;
+}
+
+.niceBorderSmall{
+    border-style:groove;
+    border-width: 7px;
+    border-top-color: lightskyblue;
+    border-left-color: lightskyblue;
+    border-right-color:lightsteelblue;
+    border-bottom-color:lightsteelblue;
+}

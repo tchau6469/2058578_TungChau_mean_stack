@@ -1,0 +1,43 @@
+<mat-card class = "niceBorder">
+    <mat-card-title style = "font-size: xx-large; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;">Task Tracker</mat-card-title>
+    <mat-card-subtitle style = "font-size: medium;">Keep track of your task!</mat-card-subtitle>
+
+    <mat-grid-list cols = "2" class = "niceBorderSmall" >
+        <mat-grid-tile >
+            
+            <form [formGroup] = "taskRef" (ngSubmit) = "addTask()">
+                
+                <h1 style = "text-align: center;">To-do tasks</h1> <br>
+                <label>ID: </label> <input type = "text" formControlName = "id" required> <br>
+                <label>Name: </label> <input type ="text" formControlName = "name" required> <br>
+                <label>Task: </label> <input type = "text" formControlName = "task" required> <br>
+                <label>Deadline: </label><input type = "date" formControlName = "deadline" required>
+                <br>
+                
+                <button type = "submit"  style = "margin-left:172px" mat-raised-button color = "primary" [disabled] = "!taskRef.valid">"Add Task!"</button> 
+                <button type = "reset" mat-raised-button color = "accent">Reset</button> 
+            </form>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            
+            <mat-card style = "border:0;">
+                <h2 style = "text-align: center;">Tasks</h2>
+                <table border = "2" style = "width:100%">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Task</th>
+                        <th>Deadline</th>
+                    </tr>
+                    <tr *ngFor ="let i of dataSource" >
+                        <td>{{i.id}}</td>
+                        <td>{{i.name}}</td>
+                        <td>{{i.task}}</td>
+                        <td>{{i.deadline}}</td>
+                    </tr>
+                </table>
+                <button mat-raised-button color = "warn" (click) = "resetTable()" >Reset</button>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</mat-card>
