@@ -1,0 +1,29 @@
+
+
+input {
+    margin-top: 0;
+    vertical-align: middle;
+}
+
+.niceBorder {
+    border-style:groove;
+    border-width: 10px;
+    border-top-color: lightskyblue;
+    border-left-color: lightskyblue;
+    border-right-color:lightsteelblue;
+    border-bottom-color:lightsteelblue;
+}
+
+p {
+    font-size: 20px;
+    
+}
+
+.correct {
+    background-color: greenyellow;
+}
+
+.incorrect{
+    background-color: red;
+    color:red;
+}

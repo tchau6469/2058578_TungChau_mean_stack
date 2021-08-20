@@ -1,0 +1,42 @@
+<div onLoad = "createForms()" *ngIf = "examFlag" >
+    
+    <mat-card>
+        <mat-card-title style= "text-align: center;">Good luck!!</mat-card-title>
+
+        <mat-card-content >
+            <form [formGroup] = "myForm" (ngSubmit) = "submit()">
+                <div *ngFor = "let q of theQuestions" style = "margin-left: 32%; width : 700px" class = "niceBorder">
+                    <p><u>{{q.question}}</u></p>
+                    <input  type = "radio" formControlName = {{q.question}} value = {{q.ans1}} > <label for = {{q.question}}><b>{{q.ans1}}</b></label> <br>
+                    <input  type = "radio" formControlName = {{q.question}} value = {{q.ans2}} > <label for = {{q.question}}><b>{{q.ans2}}</b></label> <br>
+                    <input  type = "radio" formControlName = {{q.question}} value = {{q.ans3}} > <label for = {{q.question}}><b>{{q.ans3}}</b></label> <br>
+                    <input  type = "radio" formControlName = {{q.question}} value = {{q.ans4}} > <label for = {{q.question}}><b>{{q.ans4}}</b></label>
+                    
+                </div>
+            
+                <mat-card-actions style = "text-align: center;">
+                    <button mat-raised-button color = "accent" type = "submit"  style = "margin-left: 40px"  >SUBMIT TEST</button>
+                </mat-card-actions>
+            </form> 
+
+            <div *ngIf = "scoreFlag" style = "text-align: center; font-size: xx-large;"> 
+                Answers Correct: {{numberCorrect}}
+                <span *ngIf = "passed" style = "color:green">,   You passed!!! CONGRATS</span>
+                <span *ngIf = "failed" style = "color:red">,   You failed.... :(</span>
+            </div>
+
+        </mat-card-content>
+    </mat-card>
+</div>
+
+<div *ngIf = "homeFlag"> 
+    <mat-card style = "text-align: center;">
+        <mat-card-title style = "font-size: xx-large; margin-bottom: 30px;">Tony Chau's Exam</mat-card-title>
+        <mat-card-subtitle><a href = "https://www.youtube.com/watch?v=UmqupMGGAcM" style = "font-size: large;" target = "blank">Click here for some fun</a></mat-card-subtitle>
+        <mat-card-content style = "font-size: 30px; margin-top: 100px;">Welcome to my test, click start test when ready!</mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color = "primary" (click) = "createForms()" style = "width: 300px; height: 100px; font-size: 48px;">Start test</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+
