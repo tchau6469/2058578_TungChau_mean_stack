@@ -1,0 +1,13 @@
+[
+
+    {"question": "Who is the first president of the US?", "ans1" : "Tony Chau", "ans2" : "Benjamin Adams", "ans3": "DaBaby", "ans4" : "George Washington", "correctAns" : "George Washington"},
+    {"question": "Who is Joe?", "ans1": "Joe Rogan", "ans2": "Joe Biden", "ans3": "Joe Mama", "ans4": "Joe Jonas", "correctAns": "Joe Mama" },
+    {"question": "What is 8 x 8?", "ans1": 16, "ans2": 56, "ans3": 72, "ans4": 64, "correctAns": 64},
+    {"question": "How many states are there in the US?", "ans1": 50, "ans2": 48, "ans3": 52, "ans4": 49, "correctAns": 50},
+    {"question": "Who is on the US 5 dollar bill?", "ans1": "George Washington", "ans2": "Andrew Jackson", "ans3": "Abraham Lincoln", "ans4": "Ulysses S. Grant", "correctAns": "Abraham Lincoln"},
+    {"question": "How many moons does planet Earth have?", "ans1": 1, "ans2": 2, "ans3": 3, "ans4": 4, "correctAns": 1},
+    {"question": "Who invented the lightbulb?", "ans1": "Me", "ans2": "Thomas Edison", "ans3": "George Clooney", "ans4": "Donald Trump", "correctAns": "Thomas Edison"},
+    {"question": "How many legs does a dog have?", "ans1": 1, "ans2": 2, "ans3": 3, "ans4": 4, "correctAns": 4},
+    {"question": "Which ocean is to the left of California?", "ans1": "Atlantic", "ans2": "Pacific", "ans3": "Artic", "ans4": "Indian", "correctAns": "Pacific"},
+    {"question": "How many continents are there?", "ans1": 7, "ans2": 8, "ans3": 6, "ans4": 9, "correctAns": 7}
+]
