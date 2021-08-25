@@ -12,11 +12,15 @@ function addRecord() {
         init(); 
     }
 
-    //getting all of the inputs
+    //getting all of the inputs. i added random debugger statements for the project requirement
     let fname = readline.question("Enter your first name: ");
+    debugger;
     let lname = readline.question("Enter your last name: ");
+    debugger;
     let gender = readline.question("Enter your gender: ");
+    debugger;
     let email = readline.questionEMail("Enter your email address: ");
+    debugger;
     let dateAndTime = new Date().toString();
 
     //getting the json file and parsing it
