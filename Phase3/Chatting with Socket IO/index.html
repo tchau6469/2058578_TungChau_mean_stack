@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <title>Chatting With Socket IO</title>
+    <script src = "/socket.io/socket.io.js"></script>
+    <script type = "text/JavaScript">
+
+        
+
+        var socket = io();
+        socket.emit("obj","Hello Server I am Web Socket Client");
+        socket.on("obj1",(msg)=> {
+            console.log(msg);
+        });
+
+        socket.on("msg1", (msg) => {
+            let textbox = document.getElementById("textbox");
+            textbox.textContent += `Server says: ${msg}\n`;
+        });
+
+        var sendMessage = () => {
+            let name = document.getElementById("name");
+            let message = document.getElementById("message");
+            let textbox = document.getElementById("textbox");
+
+
+            
+            textbox.textContent += `${name.value} says: ${message.value}\n`;
+
+
+            socket.emit("msg", {name: name.value, message: message.value});
+
+            message.value = "";
+        }
+    </script>
+
+    
+
+</head>
+<body>
+    <h2 style = "text-align: center;">Chatting With Socket IO</h2>
+    <div style = "text-align: center; border: 1px solid; margin:0 auto; width:500px;">
+        Name: <input type = "text" id = "name"> <br>
+        Message: <input type = "text" id = "message"> <br>
+        <button onClick = "sendMessage()">Send</button> <br>
+
+        <textarea id = "textbox" style = "width: 80%; height: 200px; margin-top:30px;"></textarea>
+    </div>
+
+    
+</body>
+</html>
