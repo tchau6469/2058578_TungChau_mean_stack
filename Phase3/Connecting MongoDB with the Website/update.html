@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Courses</title>
+
+    <script>
+        let updateCourse = () => {
+            let id = document.getElementById("id");
+            let amount = document.getElementById("amount");
+            let url = "http://localhost:9090/updateCourse/" + id.value + "/" + amount.value;
+
+            fetch(url, {method: "put"})
+                .then(response => {return response.json()})
+                .then(data=>{console.log(data)})
+                .catch(err=>console.log(err));
+
+            id.value = "";
+            amount.value = "";
+        }
+
+    </script>
+</head>
+<body>
+    <div>
+        <h2>UPDATE COURSE</h2>
+        Course Id: <input type = "text" id = "id" required> <br>
+        Amount: <input type = "text" id = "amount" required> <br>
+        <input type = "button" value = "Update" onClick = "updateCourse()">
+    </div>
+
+    <br>
+    <a href = "/">Main Menu</a>
+</body>
+</html>

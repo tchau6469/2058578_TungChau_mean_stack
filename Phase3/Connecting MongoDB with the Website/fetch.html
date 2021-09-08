@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch COURSES</title>
+
+    <script>
+        let tableHeaderString = `
+        <tr>
+            <th>Course Id</th>
+            <th>Course Name</th>
+            <th>Description</th>
+            <th>Course Amount</th>
+        </tr>
+        `
+
+        let url = "http://localhost:9090/getCourses";
+        fetch(url).then(response=> response.json()).then(data=>{
+            let theString = tableHeaderString;
+
+            for (let i of data) {
+                console.log(i);
+                theString += `
+                    <tr>
+                        <td>${i._id}</td>
+                        <td>${i.name}</td>
+                        <td>${i.description}</td>
+                        <td>${i.amount}</td>
+                    </tr>
+                `
+            }
+
+            let table = document.getElementById("table");
+            table.innerHTML = theString;
+        })
+        .catch(err=>console.log(err));
+
+    </script>
+</head>
+<body>
+    <div>
+        <h2>FETCH COURSES</h2>
+
+        <table border = "1" id = "table">
+
+        </table>
+    </div>
+    <br>
+    <a href = "/">Main Menu</a>
+</body>
+</html>
